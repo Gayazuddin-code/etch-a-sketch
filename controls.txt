@@ -1,0 +1,5 @@
+w = forwards
+s = backwards
+a = counter-clockwise
+d = clockwise
+c = clear
