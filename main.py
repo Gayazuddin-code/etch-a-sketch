@@ -1,8 +1,19 @@
 from turtle import Turtle, Screen
 
 tim = Turtle()
-tim.pensize(5)
 screen = Screen()
+
+
+def set_turtle():
+    tim.pensize(5)
+    pen_color = screen.textinput("color", "choose red or blue or green")
+    pen_color = pen_color.lower()
+    if pen_color == "exit":
+        exit(0)
+    elif pen_color not in ["red", "blue", "green"]:
+        tim.pencolor("black")
+    else:
+        tim.pencolor(pen_color)
 
 
 def mov_forward():
@@ -22,8 +33,11 @@ def clock():
 
 
 def clear_screen():
-    screen.reset()
+    tim.reset()
+    set_turtle()
 
+
+set_turtle()
 
 screen.listen()
 screen.onkey(key="w", fun=mov_forward)
