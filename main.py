@@ -9,6 +9,6 @@ def mov_forward():
 
 
 screen.listen()
-screen.onkey(key="space", fun=mov_forward)
+screen.onkey(key="w", fun=mov_forward)
 
 screen.exitonclick()
